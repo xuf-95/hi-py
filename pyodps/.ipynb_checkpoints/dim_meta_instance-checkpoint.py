@@ -5,8 +5,13 @@ from odps.models import Column, Partition, Schema
 # set encoding
 reload(sys)
 
+# get task run time
+today = datetime.now.strftime('%Y-%m-%d %H:%M:%S')
+
+
 # get project name
 pro_name = o.get_project().name
+
 
 # get task instance
 for ins in o.list_instance():
